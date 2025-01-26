@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: purple;
 }
 
 body {
@@ -12,8 +11,8 @@ body {
 
 
 .navbar {
-    background-color: transparent !important;
-    color: rgb(101, 0, 101);
+    /* background-color: transparent !important; */
+    background-color: rgb(101, 0, 101);
 }
 
 .video-presentation {
@@ -29,6 +28,11 @@ body {
     color: rgb(101, 0, 101);
 }
 
+
+
+.footer {
+    background-color: rgb(37, 0, 72);
+}
 
 
 
