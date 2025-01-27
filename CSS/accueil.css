@@ -10,9 +10,12 @@ body {
 }
 
 
+/* NAVBAR */
+
 .navbar {
+    position: fixed;
     /* background-color: transparent !important; */
-    background-color: rgb(101, 0, 101);
+    background-color: rgb(37, 0, 72);
 }
 
 .video-presentation {
@@ -29,6 +32,24 @@ body {
 }
 
 
+/* MES CLIENTS */
+
+
+/* FAQ */
+
+
+/* CONTACT */
+
+.contact{
+    background-color: blueviolet;
+}
+
+
+
+
+
+
+/* FOOTER */
 
 .footer {
     background-color: rgb(37, 0, 72);

@@ -20,6 +20,8 @@
 <body>
 
 
+  <!-- NAVBAR -->
+
   <header id="header">
     <nav class="navbar navbar-expand-lg p-2">
       <div class="container-fluid ">
@@ -34,14 +36,14 @@
               <a class="nav-link active text-light fw-bold" href="#">Accueil</a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link active text-light fw-bold" href="#myprojets">Mes Projets</a>
+              <a class="nav-link active text-light fw-bold" href="#myprojects">Mes Projets</a>
             </li>
             <li class="nav-item mx-1">
               <a class="nav-link text-light fw-bold" href="#reviews-customers">Mes Clients</a>
             </li>
-            <li class="nav-item mx-1">
+           <!--  <li class="nav-item mx-1">
               <a class="nav-link text-light fw-bold" href="#faq">FAQ</a>
-            </li>
+            </li> -->
             <li class="nav-item mx-1">
               <a class="nav-link text-light fw-bold" href="#contact">Contact</a>
             </li>
@@ -53,6 +55,7 @@
   </header>
 
 
+  <!-- VIDÉO DE PRÉSENTATION / TITRE -->
 
   <section class="video-1 d-flex justify-content-center pt-5">
     <h1 class="title-protfolio"></h1>
@@ -61,6 +64,8 @@
   </section>
 
 
+
+  <!-- VIDÉO PORTFOLIO -->
 
   <section class="" id="myprojects">
     <h2 class="projects d-flex justify-content-center pt-5 py-5">Mes Projets</h2>
@@ -102,21 +107,46 @@
   </section>
 
 
+  <!-- TEMOIGNANGES CLIENTS -->
+
   <section class="clients d-flex justify-content-center pt-5 py-5" id="reviews-customers">
-    <h2 class="temoignages-clients">Mes Clients</h2>
+    <div class="flex-wrap">
+      <h2 class="temoignages-client d-flex justify-content-center pt-5 ">Mes Témoignages Clients</h2>
+      <h3 class="pt-5">Quoi de mieux que mes clients pour parler de mes services</h3>
+    </div>
   </section>
 
 
-  <section class="faq d-flex justify-content-center pt-5 py-5" id="faq">
+
+
+  <!-- FAQ -->
+
+<!--   <section class="faq d-flex justify-content-center pt-5 py-5" id="faq">
     <h2 class="faq">FAQ</h2>
+  </section> -->
+
+
+
+  <!-- CONTACT / CALENDLY -->
+
+  <section class="contact" id="contact">
+    <h2 class="title-contact d-flex justify-content-center text-light pt-5">Contact</h2>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/postprodfm/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=97009e&primary_color=5a006f" style="min-width:620px;height:800px; border-radius: 20px; overflow: hidden; display: flex; justify-content: start;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+      <div class="email pt-5">
+        <h3 class="contacter d-flex justify-content-center text-light">Me contacter directement</h3>
+        <div class="d-flex justify-content-center fs-5">
+          <i class="fa-regular fa-envelope text-white fs-3 px-2 pt-2"></i>
+          <p class="title-email text-light fs-3 pb-5">Email : postprodfm@gmail.com</p>
+        </div>
+      </div>
   </section>
 
 
-  <section class="contact d-flex justify-content-center pt-5 py-5" id="contact">
-    <h2 class="contact">Contact</h2>
-  </section>
 
 
+  <!-- FOOTER -->
 
   <footer class="bg text-white text-center text-lg-start footer">
     <div class="container p-4">
@@ -131,9 +161,8 @@
             <li><a href="#" class="text-white text-decoration-none">Accueil</a></li>
             <li><a href="#myprojects" class="text-white text-decoration-none">Mes Projets</a></li>
             <li><a href="#reviews-customers" class="text-white text-decoration-none">Mes Clients</a></li>
-            <li><a href="#faq" class="text-white text-decoration-none">FAQ</a></li>
+            <!-- <li><a href="#faq" class="text-white text-decoration-none">FAQ</a></li> -->
             <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-            <li><a href="#rdv" class="text-white text-decoration-none">Prendre RDV</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -148,12 +177,17 @@
                 <i class="fa-brands fa-instagram fa-3x mx-4"></i>
               </a>
             </li>
+            <li>
+              <a href="https://www.linkedin.com/in/flavien-mayet-8b1b8b11b/" class="text-white text-decoration-none" target="_blank">
+                <i class="fa-brands fa-linkedin-in fa-3x"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="text-center p-3 bg">
-      <p>&copy; 2025 MYFlavien. Tous droits réservés.</p>
+      <span>&copy; 2025 MYFlavien. Tous droits réservés.</span>
     </div>
   </footer>
 
