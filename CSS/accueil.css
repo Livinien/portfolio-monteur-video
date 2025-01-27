@@ -13,9 +13,12 @@ body {
 /* NAVBAR */
 
 .navbar {
-    position: fixed;
     /* background-color: transparent !important; */
     background-color: rgb(37, 0, 72);
+}
+
+.video-1 {
+    padding-top: 240px;
 }
 
 .video-presentation {
@@ -34,6 +37,10 @@ body {
 
 /* MES CLIENTS */
 
+.btn-customers {
+    background-color: blueviolet;
+}
+
 
 /* FAQ */
 
@@ -44,6 +51,64 @@ body {
     background-color: blueviolet;
 }
 
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    max-width: 400px;
+  }
+
+  .timeline-step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .timeline-step:last-child {
+    margin-bottom: 0;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: #6a46b8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+  }
+
+  .circle.checked {
+    background-color: #d2a7ff;
+    box-shadow: 0 0 15px #d2a7ff;
+  }
+
+  .timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 2px;
+    height: calc(100% - 40px);
+    background: #9c7dbd;
+    z-index: 1;
+  }
+
+  .timeline-step:last-child::before {
+    display: none; /* Pas de ligne après la dernière étape */
+  }
+
+  .step-content {
+    margin-left: 20px;
+    font-size: 1.2rem;
+  }
 
 
 
