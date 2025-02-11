@@ -30,6 +30,24 @@ body {
 }
 
 
+/* MES PROJETS */
+
+.projects {
+  padding: 80px 0;
+}
+
+.video-project {
+  width: 100%;
+  transition: .2s ease-in-out 0s;
+  cursor: pointer;
+}
+
+.video-project:hover {
+  transform: scale(1.04);
+}
+
+
+
 /* MES CLIENTS */
 
 .btn-customers {
