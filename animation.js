@@ -1,17 +1,18 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    let modal = document.getElementsByClassName("modal");
+    let modals = document.querySelectorAll(".modal"); // Sélectionne toutes les modales
 
-    if (modal) {
-        let iframe = modal.querySelector("iframe");
-
+    modals.forEach(modal => {
+        let iframe = modal.querySelector("iframe"); // Sélectionne l'iframe dans chaque modale
+        
         modal.addEventListener("hidden.bs.modal", function () {
             if (iframe) {
-                let src = iframe.getAttribute("src"); // Récupère l'URL de l'iframe
-                iframe.setAttribute("src", ""); // Vide le src pour stopper la vidéo
-                iframe.setAttribute("src", src); // Recharge la vidéo
+                let iframeSrc = iframe.src;
+                iframe.src = ""; // Vide l'URL pour arrêter la vidéo
+                setTimeout(() => { iframe.src = iframeSrc; }, 300); // Recharge après une courte pause
             }
         });
-    }
+    });
 });
+
