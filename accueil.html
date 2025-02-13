@@ -31,13 +31,14 @@
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse navbar" id="navbarNav">
           <ul class="navbar-nav ms-auto p-3">
             <li class="nav-item mx-1">
               <a class="nav-link active text-light fw-bold" href="#">Accueil</a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link active text-light fw-bold" href="#myprojects">Mes Projets</a>
+              <a class="nav-link active text-light fw-bold" href="#myprojects">Mon Travail</a>
             </li>
             <li class="nav-item mx-1">
               <a class="nav-link text-light fw-bold" href="#reviews-customers">Mes Clients</a>
@@ -49,7 +50,7 @@
               <a class="nav-link text-light fw-bold" href="#contact">Contact</a>
             </li>
             <!-- Bouton pour ouvrir la modale -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+            <button type="button" class="btn-rdv text-white" data-bs-toggle="modal" data-bs-target="#videoModal"><i class="fa-regular fa-calendar-days mx-1"></i>
               Prendre RDV
             </button>
           </ul>
@@ -81,11 +82,27 @@
 
   <!-- VIDÉO DE PRÉSENTATION / TITRE -->
   
-  <section class="video-presentation d-flex justify-content-center align-items-center vh-100">
-    <a href="#myprojects" class="btn-style d-flex justify-content-center text-decoration-none pb-5">Mes Projets</a>
+  <section class="video-presentation d-flex flex-column justify-content-center align-items-center mt-5">
+    <h1 class="title-presentation text-white"><b>&nbsp &nbsp &nbsp &nbsp Le MONTEUR VIDÉO que tout <br>CRÉATEUR de contenu <i>RÊVE</i> d'avoir !</b></h1>
+    <p class="text-white mt-3"><b>Du rythme, de l'émotion, de l'impact. Chaque vidéo à son histoire, je vous aide à raconter la vôtre !</b></p>
+
+    <div class="bullet-points d-flex pt-5 px-5">
+      <p class="bullet_1 text-white text-decoration-none mx-4"><i class="fa-solid fa-check text-decoration-none text-white mx-2"></i><b>MONTAGE VIDÉO &nbsp</b></p>
+      <p class="bullet_2 text-white text-decoration-none"><i class="fa-solid fa-check text-decoration-none text-white mx-2"><b></i>MOTION DESIGN &nbsp</b></p>
+      <p class="bullet_3 text-white text-decoration-none ms-4"><i class="fa-solid fa-check text-decoration-none text-white mx-2"><b></i>LIVRAISON RAPIDE &nbsp</b></p>
+    </div>
     
+    <div class="d-flex pt-2">
+      <p class="bullet_4 text-white text-decoration-none mx-5"><i class="fa-solid fa-check text-decoration-none text-white mx-2"><b></i>100% CLIENTS SATISFAITS &nbsp</b></p>
+      <p class="bullet_5 text-white text-decoration-none"><i class="fa-solid fa-check text-decoration-none text-white mx-2"><b></i>RÉVISIONS ILLIMITÉES &nbsp</b></p>
+    </div>
     
-    <div class="video-1 w-75">
+
+    <div class="btn-projects">
+      <a href="#myprojects" class="btn-style d-flex justify-content-center text-decoration-none">Découvrir mon Travail<i class="fa-solid fa-arrow-down ms-2 mt-1"></i></a>
+    </div>
+    
+    <div class="video-1">
       <div class="ratio ratio-16x9">
           <iframe src="https://www.youtube.com/embed/etkwE0icTeY?si=Cti3A8e--wIzQgCr" 
             class="rounded-4" 
@@ -105,10 +122,11 @@
 
 
 
+
   <!-- VIDÉO PORTFOLIO -->
 
   <section class="projects min-vh-100" id="myprojects">
-    <h2 class="d-flex justify-content-center pt-5 py-5">Mes Projets</h2>
+    <h2 class="d-flex justify-content-center pt-5 py-5">Mon Travail</h2>
 
     <div class="container-lg">
       <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
