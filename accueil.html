@@ -48,7 +48,10 @@
             <li class="nav-item mx-1">
               <a class="nav-link text-light fw-bold" href="#contact">Contact</a>
             </li>
-            <button class="btn rounded btn-rdv fw-bold mx-3" type="submit"><i class="fa-regular fa-calendar-days mx-2"></i>Prendre RDV</button>
+            <!-- Bouton pour ouvrir la modale -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+              Prendre RDV
+            </button>
           </ul>
         </div>
       </div>
@@ -56,11 +59,34 @@
   </header>
 
 
-  <!-- VIDÉO DE PRÉSENTATION / TITRE -->
+  <!-- Modale Calendly -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+                <div class="calendly-inline-widget" 
+                    data-url="https://calendly.com/postprodfm/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=97009e&primary_color=5a006f" 
+                    style="width: 90%; height: 800px; border-radius: 20px; overflow: hidden;">
+                </div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </div>
+    </div>
+  </div>
 
+
+
+  <!-- VIDÉO DE PRÉSENTATION / TITRE -->
+  
   <section class="video-presentation d-flex justify-content-center align-items-center vh-100">
+    <a href="#myprojects" class="btn-style d-flex justify-content-center text-decoration-none pb-5">Mes Projets</a>
+    
+    
     <div class="video-1 w-75">
-        <div class="ratio ratio-16x9">
+      <div class="ratio ratio-16x9">
           <iframe src="https://www.youtube.com/embed/etkwE0icTeY?si=Cti3A8e--wIzQgCr" 
             class="rounded-4" 
             title="YouTube video player" 
@@ -127,30 +153,32 @@
 
 
 <!-- Modale 1 -->
-<div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
-        <div class="modal-content bg-dark text-white">
-            <div class="modal-header bg-dark">
-              <h5 class="modal-title" id="videoModal1Label">Vidéo 1</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://www.youtube.com/embed/nmnwi4LDBgg?si=NTEVq4OZFl1Z077e" 
-                  title="YouTube video player" 
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin" 
-                  allowfullscreen>
-                </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="modal fade videoModal" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title" id="videoModal1Label">Vidéo 1</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="ratio ratio-16x9">
+                <iframe id="videoIframe" src="https://www.youtube.com/embed/nmnwi4LDBgg?&si=NTEVq4OZFl1Z077e" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
+
+
 <!-- Modale 2 -->
-<div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModal2Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal2" tabindex="-1" aria-labelledby="videoModal2Label" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
         <div class="modal-content bg-dark text-white">
             <div class="modal-header">
@@ -159,7 +187,13 @@
             </div>
             <div class="modal-body">
                 <div class="ratio ratio-16x9">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/csYRchkbomY?si=OTvtlOSlQBWLYc3l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/csYRchkbomY?si=OTvtlOSlQBWLYc3l" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                  </iframe>
                 </div>
             </div>
         </div>
@@ -167,7 +201,7 @@
 </div>
 
 <!-- Modale 3 -->
-<div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModal3Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal3" tabindex="-1" aria-labelledby="videoModal3Label" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
         <div class="modal-content bg-dark text-white">
             <div class="modal-header bg-dark">
@@ -191,7 +225,7 @@
 
 
 <!-- Modale 4 -->
-<div class="modal fade" id="videoModal4" tabindex="-1" aria-labelledby="videoModal4Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal4" tabindex="-1" aria-labelledby="videoModal4Label" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
         <div class="modal-content bg-dark text-white">
             <div class="modal-header bg-dark">
@@ -215,7 +249,7 @@
 
 
 <!-- Modale 5 -->
-<div class="modal fade" id="videoModal5" tabindex="-1" aria-labelledby="videoModal5Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal5" tabindex="-1" aria-labelledby="videoModal5Label" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
         <div class="modal-content bg-dark text-white">
             <div class="modal-header bg-dark">
@@ -239,7 +273,7 @@
 
 
 <!-- Modale 6 -->
-<div class="modal fade" id="videoModal6" tabindex="-1" aria-labelledby="videoModal6Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal6" tabindex="-1" aria-labelledby="videoModal6Label" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen modal-lg modal-dialog-centered">
         <div class="modal-content bg-dark text-white">
             <div class="modal-header bg-dark">
@@ -263,7 +297,7 @@
 
   <section class="clients d-flex justify-content-center pt-5 py-5" id="reviews-customers">
     <div class="flex-wrap">
-      <h2 class="temoignages-client d-flex justify-content-center pt-5 ">Mes Témoignages Clients</h2>
+      <h2 class="temoignages-client d-flex justify-content-center pt-5 mt-5">Mes Témoignages Clients</h2>
       <h3 class="pt-5">Quoi de mieux que mes clients pour parler de mes services !</h3>
       <div class="d-flex justify-content-center  pt-5">
         <a href="https://fr.trustpilot.com/" class="btn-customers rounded-3" target="_blank">
@@ -286,8 +320,8 @@
 
   <!-- CONTACT / CALENDLY -->
 
-  <section class="contact" id="contact">
-    <h2 class="title-contact d-flex justify-content-center text-light pt-5">Contact</h2>
+  <section class="contact pt-5 mt-5" id="contact">
+    <h2 class="title-contact d-flex justify-content-center text-light pt-5 mt-5">Contact</h2>
 
     <!-- Step -->
     <div class="container py-5">
@@ -305,7 +339,7 @@
           <!-- Étape 2 -->
           <div class="timeline-step mt-5">
             <div class="circle">02</div>
-            <div class="step-content text-light">On étudie ton projet pour une future collaboration</div>
+            <div class="step-content text-light">On étudie ton projet ensemble pour une future collaboration</div>
           </div>
           <!-- Étape 3 -->
           <div class="timeline-step mt-5">
@@ -317,14 +351,14 @@
     <!-- Calendly -->
     <div class="d-flex justify-content-end p-5" style="flex-grow: 1;">
       <div class="calendly-inline-widget" data-url="https://calendly.com/postprodfm/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=97009e&primary_color=5a006f" style="width: 90%; height: 800px; border-radius: 20px; overflow: hidden;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
     </div>
-  </div>
 
   <div class="email justify-content-start ">
-    <h3 class="contacter d-flex text-light">Me contacter directement</h3>
+    <h3 class="contacter d-flex justify-content-center text-light pb-3">Me contacter directement</h3>
     <div class="d-flex justify-content-center fs-5">
-      <i class="fa-regular fa-envelope text-white fs-3 px-2"></i>
+      <i class="fa-regular fa-envelope text-white fs-3 px-2 pt-2"></i>
       <p class="title-email text-light fs-3 pb-5">Email : postprodfm@gmail.com</p>
     </div>
   </div>
