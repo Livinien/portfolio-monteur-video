@@ -46,15 +46,17 @@ body {
   box-shadow: none;
 }
 
+.btn-close-calendly {
+  position: relative;
+  left: 610px;
+  bottom: 30px;
+}
+
+
 
 
 
 /* VIDÉO DE PRÉSENTATION / TITRE */
-
-
-.title-presentation {
-  padding-top: 180px;
-}
 
 .bullet_1,
 .bullet_2,
@@ -98,7 +100,7 @@ body {
   padding: 3px; /* Espace entre la bordure et la vidéo */
   background: #fff; /* Dégradé de couleurs */
   -webkit-box-shadow: 0px 1px 27px 0px #000000; 
-box-shadow: 0px 1px 27px 0px #000000;
+  box-shadow: 0px 1px 27px 0px #000000;
 }
 
 /* Appliquer un arrondi et assurer l'ajustement de l'iframe */
@@ -109,18 +111,44 @@ box-shadow: 0px 1px 27px 0px #000000;
   height: 100%;
 }
 
-
 .btn-projects {
   padding-top: 100px;
 }
 
 
 
+/* QUI SUIS-JE ? */
+
+.presentation {
+  background: #e1f9ff;
+}
+
+.title-presentation, 
+.title-contact, 
+.temoignages-client,
+.title-work {
+  padding: 160px 0 0 0; 
+}
+
+.photo-presentation {
+  width: 30%;
+  border-radius: 20px;
+  margin: 80px 0 170px 100px;
+  -webkit-box-shadow: 0px 1px 27px 0px #000000; 
+  box-shadow: 0px 1px 27px 0px #000000;
+}
+
+.description {
+  padding-top: 80px;
+  font-size: 20px;
+}
+
+
 
 /* MES PROJETS */
 
 .projects {
-  background: #e1f9ff;
+  /* background: radial-gradient(circle, rgba(0,74,150,1) 59%, rgba(0,130,198,1) 100%); */
   padding: 80px 0;
 }
 
@@ -130,12 +158,11 @@ box-shadow: 0px 1px 27px 0px #000000;
   cursor: pointer;
 }
 
+
 .video-project:hover {
   transform: scale(1.04);
-}
-
-.modal {
-  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 27px 0px #000000; 
+  box-shadow: 0px 1px 27px 0px #000000;
 }
 
 /* Supprime la scrollbar */
@@ -165,10 +192,18 @@ box-shadow: 0px 1px 27px 0px #000000;
 
 
 
+
+
+
 /* MES CLIENTS */
+
+.customers {
+  background: #e1f9ff;
+}
 
 .btn-customers {
   background: linear-gradient(135deg, #00b7b1, #00aeff); 
+  margin: 0 0 90px 0;
 }
 
 .btn-customers:hover {
@@ -177,7 +212,6 @@ box-shadow: 0px 1px 27px 0px #000000;
 }
 
 
-/* FAQ */
 
 
 
@@ -188,7 +222,6 @@ box-shadow: 0px 1px 27px 0px #000000;
   background: rgb(0,74,150);
   background: radial-gradient(circle, rgba(0,74,150,1) 59%, rgba(0,130,198,1) 100%); 
 }
-
 
 .timeline {
   display: flex;
@@ -268,3 +301,6 @@ box-shadow: 0px 1px 27px 0px #000000;
 
 
 
+
+
+/* RESPONSIVE DESIGN */

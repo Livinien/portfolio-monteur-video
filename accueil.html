@@ -38,6 +38,9 @@
               <a class="nav-link active text-light fw-bold" href="#">Accueil</a>
             </li>
             <li class="nav-item mx-1">
+              <a class="nav-link active text-light fw-bold" href="#who-i-am">Qui Suis-Je</a>
+            </li>
+            <li class="nav-item mx-1">
               <a class="nav-link active text-light fw-bold" href="#myprojects">Mon Travail</a>
             </li>
             <li class="nav-item mx-1">
@@ -46,7 +49,7 @@
            <!--  <li class="nav-item mx-1">
               <a class="nav-link text-light fw-bold" href="#faq">FAQ</a>
             </li> -->
-            <li class="nav-item mx-1">
+            <li class="nav-item mx-2">
               <a class="nav-link text-light fw-bold" href="#contact">Contact</a>
             </li>
             <!-- Bouton pour ouvrir la modale -->
@@ -60,24 +63,31 @@
   </header>
 
 
-  <!-- Modale Calendly -->
-  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  
+  <!-- Calendly -->
+  
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
+    
+    <div class="modal-dialog modal-dialog-centered ">
+
     <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-calendly btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center ">
+            <div class="calendly-inline-widget" 
+              data-url="https://calendly.com/postprodfm/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=97009e&primary_color=5a006f" 
+              style="width: 90%; height: 800px; border-radius: 20px; overflow: hidden;">
             </div>
-            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
-                <div class="calendly-inline-widget" 
-                    data-url="https://calendly.com/postprodfm/30min?hide_event_type_details=1&hide_gdpr_banner=1&text_color=97009e&primary_color=5a006f" 
-                    style="width: 90%; height: 800px; border-radius: 20px; overflow: hidden;">
-                </div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            </div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 
+  
 
 
   <!-- VIDÉO DE PRÉSENTATION / TITRE -->
@@ -117,16 +127,22 @@
 </section>
 
 
+  <!-- QUI SUIS-JE ? -->
 
-
-
+  <section class="presentation" id="who-i-am">
+    <h2 class="title-presentation d-flex justify-content-center">Qui suis-je ?</h2>
+      <div class="d-flex">
+        <img src="/images/Photo de Profil.jpg" class="photo-presentation" alt="Photo de présentation">
+        <p class="description ps-5">sdgsgsdgsg</p>
+    </div>
+  </section>
 
 
 
   <!-- VIDÉO PORTFOLIO -->
 
   <section class="projects min-vh-100" id="myprojects">
-    <h2 class="d-flex justify-content-center pt-5 py-5">Mon Travail</h2>
+    <h2 class="title-work d-flex justify-content-center pt-5 py-5">Mon Travail</h2>
 
     <div class="container-lg">
       <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
@@ -313,11 +329,11 @@
 
   <!-- TEMOIGNANGES CLIENTS -->
 
-  <section class="clients d-flex justify-content-center pt-5 py-5" id="reviews-customers">
+  <section class="customers d-flex justify-content-center pt-5" id="reviews-customers">
     <div class="flex-wrap">
       <h2 class="temoignages-client d-flex justify-content-center pt-5 mt-5">Mes Témoignages Clients</h2>
       <h3 class="pt-5">Quoi de mieux que mes clients pour parler de mes services !</h3>
-      <div class="d-flex justify-content-center  pt-5">
+      <div class="d-flex justify-content-center pt-5">
         <a href="https://fr.trustpilot.com/" class="btn-customers rounded-3" target="_blank">
           <button type="button" class="btn text-light fs-4">Voir tous les avis clients</button>
         </a>
@@ -338,8 +354,8 @@
 
   <!-- CONTACT / CALENDLY -->
 
-  <section class="contact pt-5 mt-5" id="contact">
-    <h2 class="title-contact d-flex justify-content-center text-light pt-5 mt-5">Contact</h2>
+  <section class="contact" id="contact">
+    <h2 class="title-contact d-flex justify-content-center text-light">Contact</h2>
 
     <!-- Step -->
     <div class="container d-flex">
