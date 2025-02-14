@@ -61,14 +61,12 @@ body {
 .bullet_3, 
 .bullet_4,
 .bullet_5 {
-  background: rgb(0,151,178);
-  background: linear-gradient(90deg, rgba(0,151,178,1) 0%, rgba(126,217,87,1) 100%); 
+  background: linear-gradient(135deg, #00b7b1, #00aeff); 
   padding: 10px;
   border-radius: 50px;
 }
 
 .video-presentation {
-  background: rgb(0,74,150);
   background: radial-gradient(circle, rgba(0,74,150,1) 59%, rgba(0,130,198,1) 100%); 
   padding-bottom: 10px;
 }
@@ -76,31 +74,44 @@ body {
 .btn-style {
   display: inline-block;
   padding: 10px 20px;
-  background-color: rgb(0, 148, 197); /* Couleur de fond du bouton */
-  color: white; /* Couleur du texte */
+  margin-bottom: 80px;
+  background: rgb(57, 176, 255);
+  color: white;
   text-align: center;
-  text-decoration: none; /* Retirer la sous-ligne du lien */
-  border-radius: 5px; /* Coins arrondis */
-  font-size: 20px; /* Taille du texte */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Effet au survol */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .btn-style:hover {
-  background-color: rgb(0, 119, 158); /* Couleur de fond au survol */
-  /* transform: scale(1.05); Agrandir légèrement le bouton */
+  background: #2c95ff;
 }
 
 .video-1 {
+  position: relative;
+  display: inline-block;
   width: 75%;
   padding-top: 60px;
+  margin-bottom: 50px;
+  border-radius: 12px; /* Coins arrondis */
+  padding: 3px; /* Espace entre la bordure et la vidéo */
+  background: #fff; /* Dégradé de couleurs */
+  -webkit-box-shadow: 0px 1px 27px 0px #000000; 
+box-shadow: 0px 1px 27px 0px #000000;
 }
+
+/* Appliquer un arrondi et assurer l'ajustement de l'iframe */
+.video-1 iframe {
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 
 .btn-projects {
   padding-top: 100px;
-}
-
-.video-1 {
-  padding-bottom: 50px;
 }
 
 
@@ -109,6 +120,7 @@ body {
 /* MES PROJETS */
 
 .projects {
+  background: #e1f9ff;
   padding: 80px 0;
 }
 
@@ -156,7 +168,12 @@ body {
 /* MES CLIENTS */
 
 .btn-customers {
-    background-color: blueviolet;
+  background: linear-gradient(135deg, #00b7b1, #00aeff); 
+}
+
+.btn-customers:hover {
+  background: #00cdc6;
+  transition: background 0.3s ease-in-out;
 }
 
 
@@ -174,62 +191,68 @@ body {
 
 
 .timeline {
-    position: relative;
-    margin: 50px auto;
-    max-width: 400px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
 
-  .timeline-step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-    position: relative;
-  }
+.title-step {
+  padding: 80px 0 100px 0;
+}
 
-  .timeline-step:last-child {
-    margin-bottom: 0;
-  }
+/* Étapes */
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
-  .circle {
-    width: 40px;
-    height: 40px;
-    background-color: #6a46b8;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    z-index: 2;
-    position: relative;
-  }
+/* Cercles */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #88fffb, #00aeff);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
 
-  .circle.checked {
-    background-color: #d2a7ff;
-    box-shadow: 0 0 15px #d2a7ff;
-  }
+/* Effet lumineux sur l'étape active */
+.step.active .circle {
+  background: linear-gradient(135deg, #88fffb, #00aeff);
+  box-shadow: 0 0 15px rgba(155, 117, 196, 0.8);
+  color: white;
+  font-size: 20px;
+}
 
-  .timeline-step::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20px;
-    width: 2px;
-    height: calc(100% - 40px);
-    background: #9c7dbd;
-    z-index: 1;
-  }
+/* Texte des étapes */
+.content {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  transition: color 0.3s ease-in-out;
+}
 
-  .timeline-step:last-child::before {
-    display: none; /* Pas de ligne après la dernière étape */
-  }
+/* Lignes verticales */
+.line {
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(180deg, #88fffb, #00aeff);
+  margin-left: 24px;
+}
 
-  .step-content {
-    margin-left: 20px;
-    font-size: 1.2rem;
-  }
+/* Animation Hover */
+.step:hover .circle {
+  transform: scale(1.1);
+  background: #00cdc6;
+}
+
 
 
 
