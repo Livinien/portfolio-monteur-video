@@ -79,55 +79,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// PASSER D'UNE VIDÉO À UNE AUTRE AVEC LES BOUTONS "SUIVANT" ET "PRÉCÉDENT"
 
-// Liste des vidéos
-const videos = [
-  "https://www.youtube.com/embed/nmnwi4LDBgg?&si=NTEVq4OZFl1Z077e",
-  "https://www.youtube.com/embed/csYRchkbomY?si=OTvtlOSlQBWLYc3l",
-  "https://www.youtube.com/embed/UQ_rWC88b40?si=89V71rf_CdimX5OB",
-  "https://www.youtube.com/embed/abc123xyz456?si=abcd1234",
-  "https://www.youtube.com/embed/xyz789abc123?si=wxyz7890",
-  "https://www.youtube.com/embed/ghi456def789?si=xyz456ghi"
-];
+function changeVideo(direction, modalId) {
+    const modals = document.querySelectorAll('.videoModal');
+    let currentIndex = Array.from(modals).findIndex(modal => modal.id === modalId);
 
-let currentIndex = 0; // Index de la vidéo actuelle
+    if (currentIndex === -1) return;
 
-// Fonction pour ouvrir la modale avec une vidéo spécifique
-function openVideoModal(index, modalId) {
-    currentIndex = index;
-    updateVideo(modalId);
-    var videoModal = new bootstrap.Modal(document.getElementById(modalId));
-    videoModal.show();
-}
+    let newIndex = (currentIndex + direction + modals.length) % modals.length;
+    let newModal = modals[newIndex];
 
-// Fonction pour changer de vidéo avec autoplay
-function changeVideo(direction) {
-    currentIndex += direction;
-
-    // Vérifie les limites
-    if (currentIndex < 0) {
-        currentIndex = videos.length - 1; // Revient à la dernière vidéo
-    } else if (currentIndex >= videos.length) {
-        currentIndex = 0; // Revient à la première vidéo
+    // Ferme la modale actuelle
+    let currentModalInstance = bootstrap.Modal.getInstance(document.getElementById(modalId));
+    if (currentModalInstance) {
+        currentModalInstance.hide();
     }
 
-    // Mets à jour toutes les modales ouvertes avec la nouvelle vidéo
-    const modals = document.querySelectorAll('.modal.show');
-    modals.forEach(modal => {
-        const modalId = modal.id;
-        updateVideo(modalId);
-    });
-}
+    // Ouvre la nouvelle modale
+    let newModalInstance = new bootstrap.Modal(newModal);
+    newModalInstance.show();
 
-// Fonction qui met à jour la vidéo et le titre
-function updateVideo(modalId) {
-    const videoIframe = document.querySelector(`#${modalId} iframe`);
-    const videoTitle = document.querySelector(`#${modalId} .modal-title`);
-
-    // Génère l'URL avec autoplay activé
-    const autoplayUrl = videos[currentIndex] + "&autoplay=1";
-
-    // Met à jour l'iframe et le titre
-    videoIframe.src = autoplayUrl;
-    videoTitle.textContent = `Vidéo ${currentIndex + 1}`;
+    // Mise à jour du titre et de la vidéo
+    const videoTitle = newModal.querySelector(".modal-title");
+    const iframe = newModal.querySelector(".iframe");
+    videoTitle.textContent = `Vidéo ${newIndex + 1}`;
+    iframe.src = iframe.src; // Recharge la vidéo pour éviter les bugs d'autoplay
 }

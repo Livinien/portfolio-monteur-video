@@ -184,17 +184,19 @@
 
 
 <!-- Modale 1 -->
-<div class="modal fade videoModal" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal1" tabindex="-1" aria-labelledby="videoModal1Label" aria-hidden="true" data-index="0">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
       <div class="modal-header bg-dark">
         <h5 class="modal-title" id="videoModal1Label">Vidéo 1</h5>
         <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body video-thumbnail" data-index="2">
-        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+      <div class="modal-body video-thumbnail" data-index="1">
+        <button class="prev" onclick="changeVideo(-1, 'videoModal1')">&#10094;</button>
           <div class="ratio ratio-16x9">
-            <iframe id="videoIframe" class="iframe"
+            <iframe 
+            id="videoIframe1" 
+            class="iframe"
             src="https://www.youtube.com/embed/nmnwi4LDBgg?&si=NTEVq4OZFl1Z077e" 
             title="YouTube video player" 
             frameborder="0" 
@@ -203,7 +205,7 @@
             allowfullscreen>
           </iframe>
         </div>
-        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+        <button class="next" onclick="changeVideo(1, 'videoModal1')">&#10095;</button>
         </div>
       </div>
   </div>
@@ -212,23 +214,24 @@
 
 
 <!-- Modale 2 -->
-<div class="modal fade videoModal" id="videoModal2" tabindex="-1" aria-labelledby="videoModal2Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal2" tabindex="-1" aria-labelledby="videoModal2Label" aria-hidden="true" data-index="1">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
       <div class="modal-header bg-dark">
         <h5 class="modal-title" id="videoModal2Label">Vidéo 2</h5>
         <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body video-thumbnail" data-index="1">
-        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+      <div class="modal-body video-thumbnail" data-index="2">
+        <button class="prev" onclick="changeVideo(-1, 'videoModal2')">&#10094;</button>
         <div class="ratio ratio-16x9">
-          <iframe id="videoIframe2" 
+          <iframe 
+            id="videoIframe2" 
             class="iframe" 
             src="https://www.youtube.com/embed/csYRchkbomY?si=OTvtlOSlQBWLYc3l" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+        <button class="next" onclick="changeVideo(1, 'videoModal2')">&#10095;</button>
       </div>
     </div>
   </div>
@@ -237,23 +240,24 @@
 
 
 <!-- Modale 3 -->
-<div class="modal fade videoModal" id="videoModal3" tabindex="-1" aria-labelledby="videoModal3Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal3" tabindex="-1" aria-labelledby="videoModal3Label" aria-hidden="true" data-index="2">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
       <div class="modal-header bg-dark">
         <h5 class="modal-title" id="videoModal3Label">Vidéo 3</h5>
         <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body video-thumbnail" data-index="1">
-        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+      <div class="modal-body video-thumbnail" data-index="3">
+        <button class="prev" onclick="changeVideo(-1, 'videoModal3')">&#10094;</button>
         <div class="ratio ratio-16x9">
-          <iframe id="videoIframe3" 
+          <iframe 
+            id="videoIframe3" 
             class="iframe" 
             src="https://www.youtube.com/embed/UQ_rWC88b40?si=89V71rf_CdimX5OB" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+        <button class="next" onclick="changeVideo(1, 'videoModal3')">&#10095;</button>
       </div>
     </div>
   </div>
@@ -262,23 +266,24 @@
 
 
 <!-- Modale 4 -->
-<div class="modal fade videoModal" id="videoModal4" tabindex="-1" aria-labelledby="videoModal4Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal4" tabindex="-1" aria-labelledby="videoModal4Label" aria-hidden="true" data-index="3">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
       <div class="modal-header bg-dark">
         <h5 class="modal-title" id="videoModal4Label">Vidéo 4</h5>
         <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body video-thumbnail" data-index="1">
-        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+      <div class="modal-body video-thumbnail" data-index="4">
+        <button class="prev" onclick="changeVideo(-1, 'videoModal4')">&#10094;</button>
         <div class="ratio ratio-16x9">
-          <iframe id="videoIframe3" 
+          <iframe 
+            id="videoIframe4" 
             class="iframe" 
             src="https://www.youtube.com/embed/LqCtYoWB4XQ?si=N9dey3_bqwqDa7jk" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+        <button class="next" onclick="changeVideo(1, 'videoModal4')">&#10095;</button>
       </div>
     </div>
   </div>
@@ -287,23 +292,27 @@
 
 
 <!-- Modale 5 -->
-<div class="modal fade videoModal" id="videoModal5" tabindex="-1" aria-labelledby="videoModal5Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal5" tabindex="-1" aria-labelledby="videoModal5Label" aria-hidden="true" data-index="">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
       <div class="modal-header bg-dark">
         <h5 class="modal-title" id="videoModal5Label">Vidéo 5</h5>
         <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body video-thumbnail" data-index="1">
-        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+      <div class="modal-body video-thumbnail" data-index="5">
+        <button class="prev" onclick="changeVideo(-1, 'videoModal5')">&#10094;</button>
         <div class="ratio ratio-16x9">
-          <iframe id="videoIframe3" 
+          <iframe 
+            id="videoIframe5" 
             class="iframe" 
-            src="https://www.youtube.com/embed/LqCtYoWB4XQ?si=N9dey3_bqwqDa7jk" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/UbcoAnAPgTg?si=RDXbCc8CIOjlUe4y" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
         </div>
-        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+        <button class="next" onclick="changeVideo(1, 'videoModal5')">&#10095;</button>
       </div>
     </div>
   </div>
@@ -312,23 +321,26 @@
 
 
 <!-- Modale 6 -->
-<div class="modal fade videoModal" id="videoModal6" tabindex="-1" aria-labelledby="videoModal6Label" aria-hidden="true">
+<div class="modal fade videoModal" id="videoModal6" tabindex="-1" aria-labelledby="videoModal6Label" aria-hidden="true" data-index="6">
   <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content bg-dark text-white">
       <div class="modal-header bg-dark">
         <h5 class="modal-title" id="videoModal6Label">Vidéo 6</h5>
         <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body video-thumbnail" data-index="1">
-        <button class="prev" onclick="changeVideo(-1)">&#10094;</button>
+      <div class="modal-body video-thumbnail" data-index="6">
+        <button class="prev" onclick="changeVideo(-1, 'videoModal6')">&#10094;</button>
         <div class="ratio ratio-16x9">
-          <iframe id="videoIframe3" 
+          <iframe 
+            id="videoIframe6"  
             class="iframe" 
-            src="https://www.youtube.com/embed/LqCtYoWB4XQ?si=N9dey3_bqwqDa7jk" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            src="https://www.youtube.com/embed/S4PxaxyFhqA?si=70u8CCeb2ZZUZtkJ" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
         </div>
-        <button class="next" onclick="changeVideo(1)">&#10095;</button>
+        <button class="next" onclick="changeVideo(1, 'videoModal6')">&#10095;</button>
       </div>
     </div>
   </div>
@@ -377,7 +389,7 @@
           <h2 class="title-step text-white">On discute ensemble de ton projet vidéo !</h2>
           <div class="step active">
               <div class="circle"><i class="fa-solid fa-check"></i></div>
-              <div class="content text-white">Tu prends rendez-vous avec moi</div>
+              <div class="content text-white">Tu prends rendez-vous avec moi.</div>
           </div>
           <div class="line"></div>
           <div class="step">
