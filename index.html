@@ -131,6 +131,12 @@
           </iframe>
         </div>
     </div>
+
+    <!-- Bouton pour ouvrir la modale -->
+    <button type="button" class="btn-rdv-2 text-white" data-bs-toggle="modal" data-bs-target="#videoModal"><i class="fa-regular fa-calendar-days mx-1"></i>
+      JE RÉSERVE MON APPEL POUR MON PROJET VIDÉO
+    </button>
+
 </section>
 
 
@@ -160,11 +166,16 @@
 
   <!-- VIDÉO PORTFOLIO -->
 
+  <!-- VIDÉO YOUTUBE (SHORT/REELS) -->
+
+
   <section class="projects min-vh-100" id="myprojects">
-    <h2 class="title-work d-flex justify-content-center pt-5 py-5">Mon Travail</h2>
+    <h2 class="title-work d-flex justify-content-center pt-5 py-2">Mon Travail</h2>
+    <h3 class="title-work d-flex justify-content-center pt-1 py-5">(YouTube)</h3>
 
     <div class="container-lg">
       <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+
         <!-- Projet 1 -->
         <div class="col">
             <img src="images/Image_1.jpg" class="video-project rounded-3 img-fluid" alt="Video 1" data-bs-toggle="modal" data-bs-target="#videoModal1">
@@ -380,7 +391,86 @@
 
 
 
+<!-- VIDÉO INSTAGRAM/TIKTOK (SHORT/REELS) -->
 
+
+  <h3 class="title-work d-flex justify-content-center pt-5 py-5">Instagram - TikTok (Short / Reels)</h3>
+
+  <div class="container-lg">
+    <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+      <!-- Projet 7 -->
+      <div class="col">
+          <img src="images/Image_6.jpg" class="video-project rounded-3 img-fluid" alt="Video 7" data-bs-toggle="modal" data-bs-target="#videoModal7">
+          <h3 class="d-flex justify-content-center pt-3 py-5">Le métier de monteur vidéo</h3>
+      </div>
+
+      <!-- Projet 8 -->
+      <div class="col">
+        <img src="images/Image_5.jpg" class="video-project rounded-3 img-fluid" alt="Video 8" data-bs-toggle="modal" data-bs-target="#videoModal8">
+        <h3 class="d-flex justify-content-center pt-3 py-5">David Goggins</h3>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modale 7 -->
+  <div class="modal fade videoModal" id="videoModal7" tabindex="-1" aria-labelledby="videoModal7Label" aria-hidden="true" data-index="7">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title" id="videoModal7Label">Vidéo 7</h5>
+          <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body video-thumbnail" data-index="7">
+          <button class="prev" onclick="changeVideo(-1, 'videoModal7')">&#10094;</button>
+          <div class="ratio ratio-16x9">
+            <iframe
+              id="videoIframe7"
+              class="iframe"
+              src="https://www.youtube.com/embed/staQntBk9xk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <button class="next" onclick="changeVideo(1, 'videoModal7')">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modale 8 -->
+  <div class="modal fade videoModal" id="videoModal8" tabindex="-1" aria-labelledby="videoModal8Label" aria-hidden="true" data-index="8">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header bg-dark">
+          <h5 class="modal-title" id="videoModal8Label">Vidéo 8</h5>
+          <button type="button" class="btn-close btn-close-video btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body video-thumbnail" data-index="8">
+          <button class="prev" onclick="changeVideo(-1, 'videoModal8')">&#10094;</button>
+          <div class="ratio ratio-16x9">
+            <iframe
+              id="videoIframe8"
+              class="iframe"
+              src="https://www.youtube.com/embed/0Szehg5JsIo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <button class="next" onclick="changeVideo(1, 'videoModal8')">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- TEMOIGNANGES CLIENTS -->

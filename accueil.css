@@ -23,7 +23,7 @@ body {
     color: green;
 }
 
-.navbar .btn-rdv {
+.btn-rdv {
   background-color: rgb(0, 148, 197);
   color: rgb(65, 0, 65);;
   padding: 7px;
@@ -169,6 +169,21 @@ body {
 }
 
 
+.btn-rdv-2 {
+  background: #2c95ff;
+  color: rgb(65, 0, 65);;
+  padding: 20px;
+  margin: 40px 0 70px 0;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-rdv-2:hover {
+  background: rgb(57, 176, 255); /* Couleur du bouton lorsqu'on clique */
+}
+
+
 
 /* QUI SUIS-JE ? */
 
@@ -205,6 +220,12 @@ body {
 .projects {
   /* background: radial-gradient(circle, rgba(0,74,150,1) 59%, rgba(0,130,198,1) 100%); */
   padding: 80px 0;
+}
+
+.logo-play {
+  position: absolute;
+  width: 60px;
+  z-index: 10;
 }
 
 .video-project {
@@ -612,6 +633,15 @@ body {
 }
 
 
+@media (max-width: 600px) { 
+
+  .btn-rdv-2 {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+}
+
 
 @media (max-width: 500px) { 
 
@@ -622,6 +652,11 @@ body {
 
   .step, .line {
     display: none;
+  }
+
+  .btn-rdv-2 {
+    padding: 10px;
+    font-size: 10px;
   }
 
 }
@@ -642,8 +677,14 @@ body {
 
 @media (max-width: 366px) { 
 
+  .btn-rdv-2 {
+    padding: 8px;
+    font-size: 8px;
+  }
+
   .social-network li {
     font-size: 5px;
   }
+  
 
 }
